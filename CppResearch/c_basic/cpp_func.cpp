@@ -6,7 +6,7 @@
 //  Copyright © 2018 BruceYoung. All rights reserved.
 //
 
-#include "do_and_while.hpp"
+#include "cpp_func.hpp"
 
 #include <iostream>
 using namespace std;
@@ -29,3 +29,5 @@ void do_while_func(){
     }while (secret != guess);
   
 }
+
+

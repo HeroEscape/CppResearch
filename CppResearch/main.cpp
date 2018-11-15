@@ -11,7 +11,9 @@
 extern "C"{
  #include "c_basic/c_func.h"
 }
-#include "c_basic/do_and_while.hpp"
+#include "c_basic/pointer/base.hpp"
+
+
 
 /*
  *1.File global namespace using
@@ -24,6 +26,9 @@ extern "C"{
 int main(int argc, const char * argv[]) {
     // insert code here...
  
-    c_for_in();
+    pointerOfPointer();
+
     return 0;
 }
+
+

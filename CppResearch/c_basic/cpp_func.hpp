@@ -10,6 +10,7 @@
 #define do_and_while_hpp
 
 #include <stdio.h>
+
 void while_func();
 void do_while_func();
 
