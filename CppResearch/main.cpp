@@ -11,8 +11,8 @@
 extern "C"{
  #include "c_basic/c_func.h"
 }
-#include "c_basic/pointer/base.hpp"
-
+#include "c_basic/pointer.hpp"
+#include "c_basic/grammar.hpp"
 
 
 /*
@@ -26,7 +26,7 @@ extern "C"{
 int main(int argc, const char * argv[]) {
     // insert code here...
  
-    pointerOfPointer();
+    memoryScan();
 
     return 0;
 }
