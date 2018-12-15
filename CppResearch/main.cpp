@@ -13,6 +13,7 @@ extern "C"{
 }
 #include "c_basic/pointer.hpp"
 #include "c_basic/grammar.hpp"
+#include "c_basic/struct/struct_data.hpp"
 
 
 /*
@@ -26,7 +27,8 @@ extern "C"{
 int main(int argc, const char * argv[]) {
     // insert code here...
  
-    memoryScan();
+  
+    objectMem();
 
     return 0;
 }
