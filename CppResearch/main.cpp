@@ -1,4 +1,4 @@
-//
+﻿//
 //  main.cpp
 //  CppResearch
 //
@@ -25,7 +25,7 @@ extern "C"{
  *namespace m = MySpace;
  */
 int main(int argc, const char * argv[]) {
-    // insert code here...
+    // insert code here...1
  
   
     objectMem();
