@@ -14,7 +14,7 @@ extern "C"{
 #include "c_basic/pointer.hpp"
 #include "c_basic/grammar.hpp"
 #include "c_basic/struct/struct_data.hpp"
-
+#include "homework/car.h"
 
 /*
  *1.File global namespace using
@@ -28,7 +28,9 @@ int main(int argc, const char * argv[]) {
     // insert code here...1
  
   
-    objectMem();
+    carrun();
+
+	system("pause");
 
     return 0;
 }
