@@ -8,7 +8,14 @@ typedef struct Bike {
 			std::cout << "run" << std::endl;
 		};
 	};
-	Wheel* frontwheel = new Wheel();
-	Wheel* backwheel = new Wheel();
+	void bikerun() {
+		Wheel* frontwheel = new Wheel();
+		Wheel* backwheel = new Wheel();
+
+		frontwheel->run();
+		backwheel->run();
+		delete frontwheel;
+		delete backwheel;
+	}
 }Bike;
 void carrun();
