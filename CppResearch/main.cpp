@@ -14,6 +14,8 @@ extern "C"{
 #include "c_basic/pointer.hpp"
 #include "c_basic/grammar.hpp"
 #include "c_basic/struct/struct_data.hpp"
+#include "c_basic/struct/object_access.hpp"
+#include "c_basic/function_override_and_default_param.hpp"
 
 
 /*
@@ -28,7 +30,9 @@ int main(int argc, const char * argv[]) {
     // insert code here...
  
   
-    objectMem();
+//    carStart();
+    //carStart();
+    function_override_and_default_parm::multiConstructor();
 
     return 0;
 }

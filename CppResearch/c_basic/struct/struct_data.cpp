@@ -17,6 +17,7 @@ using namespace std;
 void previewStruct(){
     //一个简单的Car结构
     Car car;
+    
     car.name = "QQ";
     car.price = 40000.00;
     car.type = 1;
@@ -80,14 +81,31 @@ void functionMember(){
     car->tellInfo();
 }
 
-Car::Car(){
-    cout<<"Car created"<<endl;
-}
 
 void Car::tellInfo(){
     cout<<"car name:"<<name<<
     " price:"<<price<<
     " type:"<<this->type<<endl;
+}
+
+void Car::init(){
+    fontLeftWheel = new Wheel();
+    fontRightWheel = new Wheel();
+    backLeftWheel = new Wheel();
+    backRightWheel = new Wheel();
+}
+void Car::clear(){
+    delete fontLeftWheel;
+    delete fontRightWheel;
+    delete backLeftWheel;
+    delete backRightWheel;
+}
+
+void Car::start(){
+    fontLeftWheel->run();
+    fontRightWheel->run();
+    backLeftWheel->run();
+    backRightWheel->run();
 }
 
 /*
@@ -142,6 +160,17 @@ void objectMem(){
      *这样结果就是24B（24bytes）
      */
     
+}
+
+void Car::Wheel::run(){
+    cout<<"wheel run"<<endl;
+}
+
+void carStart(){
+    Car car;
+    car.init();
+    car.start();
+    car.clear();
 }
 
 

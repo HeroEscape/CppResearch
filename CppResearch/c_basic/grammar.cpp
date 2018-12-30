@@ -56,7 +56,7 @@ void badGoto(){
         for(int j=0;j<100;j++){
             cout<<"j:"<<j<<endl;
             if(j>10){
-                //break;
+                break;
                 //goto bottom;
             }
         }
@@ -93,7 +93,7 @@ extern int thirdpart_value;
 //extern int thirdpart_static_value;
 void useExtern(){
     cout<<"thirdpart_value:"<<thirdpart_value<<endl;
-    // statuc value can not be linked from outter
+    // static value can not be linked from outter
     //cout<<thirdpart_static_value<<endl;
 }
 
@@ -116,6 +116,7 @@ void useConst(){
     //*ppi=5;
     
     //常量转换const_cast
+
     int& rvi =const_cast<int&>(pi);
     int* pvi =const_cast<int*>(ppi);
     cout<<"pvi:"<<pvi<<endl;
@@ -159,10 +160,10 @@ void func1(){
     cout<<"func1"<<endl;
 }
 void func2(){
-     cout<<"func2"<<endl;
+    cout<<"func2"<<endl;
 }
 void func3(){
-     cout<<"func3"<<endl;
+    cout<<"func3"<<endl;
 }
 
 /*
@@ -170,7 +171,7 @@ void func3(){
  *函数也是有指针的
  */
 void functionAddress(int funcIndex){
-    void (*funcPtr)();
+    void(*funcPtr)();
     switch (funcIndex) {
         case 1:
             funcPtr = &func1;
@@ -210,6 +211,7 @@ void functionAddress(int funcIndex){
  定义的函数
  *
  */
+
 
 void homework(){
     void*(*(*p1)(int))[10] = &f1;
