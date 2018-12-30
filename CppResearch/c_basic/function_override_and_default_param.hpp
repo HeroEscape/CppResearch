@@ -59,9 +59,6 @@ namespace function_override_and_default_parm {
         }
     };
     void multiConstructor();
-    
-    
-
 }
 
 

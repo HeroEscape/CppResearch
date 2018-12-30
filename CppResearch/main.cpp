@@ -14,13 +14,13 @@ extern "C"{
 #include "c_basic/pointer.hpp"
 #include "c_basic/grammar.hpp"
 #include "c_basic/struct/struct_data.hpp"
-<<<<<<< HEAD
+
 #include "c_basic/struct/object_access.hpp"
 #include "c_basic/function_override_and_default_param.hpp"
 
-=======
+
 #include "homework/car.h"
->>>>>>> aebe0bde952ca5d014c5d8581e37f79f3c4a776b
+#include "answer_reference/carsimulation/simulationstart.hpp"
 
 /*
  *1.File global namespace using
@@ -32,7 +32,7 @@ extern "C"{
  */
 int main(int argc, const char * argv[]) {
     // insert code here...
-    function_override_and_default_parm::multiConstructor();
+    car_simulation::startSimulation();
 
 
     return 0;

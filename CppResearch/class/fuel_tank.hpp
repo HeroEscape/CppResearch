@@ -21,7 +21,14 @@ class FuelTank{
     float height;
     float length;
 public:
-    void gasolineUp();
-    void useGasoline(float value);
+    void gasolineUp(float value){
+        gasolineValue += value;
+    }
+    void useGasoline(float value){
+        gasolineValue -= value;
+    }
+    float getGasOlineValue(){
+        return gasolineValue;
+    }
 };
 #endif /* fuel_tank_hpp */
