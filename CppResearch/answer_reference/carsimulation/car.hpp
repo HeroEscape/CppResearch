@@ -22,7 +22,7 @@ namespace car_simulation{
         void stop();
         void run();
         bool needAddGas(){
-            if(this->fuelTank->getGasOlineValue()<5){
+            if(this->fuelTank->getGasOlineValue()<10){
                 return true;
             }else{
                 return false;

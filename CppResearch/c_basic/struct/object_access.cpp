@@ -23,12 +23,15 @@ void Car::tellInfo(){
  *又是在对象创建的时候自动调用的
  */
 Car::Car(){
+    std::cout<<"constructor Car"<<std::endl;
     init();
 }
+
 /*
  *和构造函数一样，析构函数也是自动被调用，在对象被销毁的时候被调用
  */
 Car::~Car(){
+    std::cout<<"destory Car"<<std::endl;
     clear();
 }
 

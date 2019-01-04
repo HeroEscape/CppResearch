@@ -33,9 +33,17 @@ extern "C"{
 int main(int argc, const char * argv[]) {
     // insert code here...
     car_simulation::startSimulation();
+    //object_access::Car* car = new object_access::Car();
+//    car-
 
-
+    
     return 0;
+    
+    
+    
+    
+    
+    
 }
 
 
