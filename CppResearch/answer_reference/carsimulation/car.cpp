@@ -16,6 +16,12 @@ car_simulation::Car::Car(){
     backRightWheel = new Wheel();
     fuelTank = new FuelTank();
 }
+car_simulation::Car::~Car(){
+    delete fontLeftWheel;
+    delete fontRightWheel;
+    delete backLeftWheel;
+    delete backRightWheel;
+}
 
 void car_simulation::Car::start(){
     cout<<"car start"<<endl;
