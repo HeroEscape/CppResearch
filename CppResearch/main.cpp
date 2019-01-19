@@ -32,8 +32,10 @@ extern "C"{
  */
 int main(int argc, const char * argv[]) {
     // insert code here...
-    car_simulation::startSimulation();
-
+	Bike* b = new Bike();
+	b->bikerun();
+	b->bikedelete();
+	system("pause");
 
     return 0;
 }
