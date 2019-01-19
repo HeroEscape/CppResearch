@@ -7,7 +7,6 @@
 //
 
 #include <iostream>
-#include "misc/namespace_research.hpp"
 extern "C"{
  #include "c_basic/c_func.h"
 }
@@ -45,7 +44,7 @@ int main(int argc, const char * argv[]) {
 //    inlineFunc();
 //    (new InlineFuncDemo())->inlineFunc();
 //    constTest();
-//    nameControlMain();
+    nameControlMain();
     
     std::cout<<"main end"<<std::endl;
     return 0;
