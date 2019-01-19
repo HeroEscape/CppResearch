@@ -34,4 +34,6 @@ void car_simulation::startSimulation(){
         
         
     }
+    
+    delete car;
 }

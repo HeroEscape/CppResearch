@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include <string>
+#include <iostream>
 #include "../../class/fuel_tank.hpp"
 namespace object_access{
 typedef struct Car{
@@ -63,6 +64,7 @@ private:
     void selfClean();//自我清理
     //3.class
     FuelTank* fuelTank;
+    
 } Car;
 //2.对象的内存分布
 void objectMem();

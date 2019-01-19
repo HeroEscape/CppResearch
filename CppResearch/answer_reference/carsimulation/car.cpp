@@ -16,6 +16,12 @@ car_simulation::Car::Car(){
     backRightWheel = new Wheel();
     fuelTank = new FuelTank();
 }
+car_simulation::Car::~Car(){
+    delete fontLeftWheel;
+    delete fontRightWheel;
+    delete backLeftWheel;
+    delete backRightWheel;
+}
 
 void car_simulation::Car::start(){
     cout<<"car start"<<endl;
@@ -35,7 +41,7 @@ void car_simulation::Car::run(){
     fontRightWheel->run();
     backLeftWheel->run();
     backRightWheel->run();
-    fuelTank->useGasoline(0.01);
+    fuelTank->useGasoline(1);
     cout<<"car current gas:"<<fuelTank->getGasOlineValue()<<endl;
     
 }

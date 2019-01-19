@@ -17,6 +17,7 @@ namespace car_simulation{
     public:
         void run(){
             std::cout<<"wheel run"<<std::endl;
+            std::cout<<"炫酷"<<std::endl;
         }
         void stop(){
             std::cout<<"wheel stop"<<std::endl;

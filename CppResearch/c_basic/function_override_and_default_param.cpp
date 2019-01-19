@@ -60,3 +60,12 @@ void function_override_and_default_parm::multiConstructor(){
     Phone* p4 = new Phone("HUAWEI",2500);
     p4->log();
 }
+
+void function_override_and_default_parm::defaultParm(int a,int b){
+    cout<<"a:"<<a<<endl;
+    cout<<"b:"<<b<<endl;
+}
+
+void function_override_and_default_parm::occupiedParm(int a, int){
+    
+}

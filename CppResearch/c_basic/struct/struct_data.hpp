@@ -26,7 +26,6 @@ typedef struct Car{
     //5.嵌套结构体
     typedef struct Wheel{
         void run();
-        
     } Wheel;
     //前左轮
     Wheel* fontLeftWheel;

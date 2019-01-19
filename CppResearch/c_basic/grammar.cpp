@@ -89,7 +89,7 @@ void staticVariable(){
 
 
 extern int thirdpart_value;
-//statuc value can not be linked from outter
+//static value can not be linked from outter
 //extern int thirdpart_static_value;
 void useExtern(){
     cout<<"thirdpart_value:"<<thirdpart_value<<endl;
