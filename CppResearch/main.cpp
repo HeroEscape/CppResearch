@@ -37,6 +37,12 @@ int main(int argc, const char * argv[]) {
     function_override_and_default_parm::multiConstructor();
     useMacro();
     // insert code here...
+
+	Bike* b = new Bike();
+	b->bikerun();
+	b->bikedelete();
+	system("pause");
+
     //function_override_and_default_parm::defaultParm(1);
     //object_access::Car* car = new object_access::Car();
 //    car-
@@ -47,6 +53,7 @@ int main(int argc, const char * argv[]) {
     nameControlMain();
     
     std::cout<<"main end"<<std::endl;
+
     return 0;
 }
 
