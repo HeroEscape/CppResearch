@@ -11,7 +11,7 @@ void bikesimulate() {
 	{
 		int time = 0;
 		bike1.bikerun();
-		tili1.tilisimulate()£»
+		tili1.tilisimulate();
 		distanceleft = distanceleft - speed;
 		cout << "distanceleft:" << distanceleft << endl;
 		if (value <= 0) {

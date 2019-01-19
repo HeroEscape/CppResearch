@@ -2,20 +2,19 @@
 #include<iostream>
 using namespace std;
 typedef struct Tili {
-	struct tilivalue {
+	struct TiliValue {
 		int value = 50;
-		int xiaohaoliang = 0.1
-		void xiaohao(xiaohaoliang){
-			value = value - xiaohaoliang
+		int xiaoHao(int xiaohaoliang) {
+			value = value - xiaohaoliang;
 			cout << "presentvalue:" << value << endl;
 			return(value);
 		};
 	};
-	tilivalue* tilivalue1 = new tilivalue();
+	TiliValue* tiliValue = new TiliValue();
 	void tilisimulate() {
-		tilivalue1->xiaohao();
+		tiliValue->xiaoHao(1);
 	}
 	void clear() {
-		delete tilivalue1;
+		delete tiliValue;
 	}
 }Tili;
