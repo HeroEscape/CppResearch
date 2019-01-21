@@ -18,6 +18,8 @@
  *但是宏的最大缺点就是不可控，可能会引入奇怪的bug
  */
 #define F(x) (x+1)
+#define PI 3.1415926
+
 void useMacro();
 /*
  *内联函数和宏的工作机制一样（代码插入展开），但是使用方法和普通函数一样，
@@ -27,6 +29,7 @@ void useMacro();
 inline void inlineFunc(){
     std::cout<<"inlineFunc"<<std::endl;
 }
+
 
 class InlineFuncDemo{
 public:
@@ -39,6 +42,17 @@ public:
     void notInline();
     //当然也可以将外部定义的函数主动声明为内联
     inline void forceInlineFunc();
+    
+    //访问器getter
+    int getValue(){
+        return value;
+    }
+    //修改器setter
+    void setValue(int value){
+        this->value = value;
+    }
+private:
+    int value;
 };
 
 #endif /* inline_func_hpp */

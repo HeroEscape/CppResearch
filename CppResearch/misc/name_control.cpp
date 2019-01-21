@@ -38,6 +38,7 @@ int name_control::Y::instanceCount = 0;
 
 name_control::X name_control::Y::x("MyName");
 
+//没有this
 void name_control::Y::staticFunc(){
     std::cout<<"name_control::Y::staticFunc instanceCount=>"<<instanceCount<<std::endl;
     

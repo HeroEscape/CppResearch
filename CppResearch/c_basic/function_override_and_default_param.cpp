@@ -22,6 +22,7 @@ void function_override_and_default_parm::func(int){
 void function_override_and_default_parm::func(float){
     cout<<"func(float)"<<endl;
 }
+
 void function_override_and_default_parm::X::func(){
     cout<<"X::func()"<<endl;
 }
