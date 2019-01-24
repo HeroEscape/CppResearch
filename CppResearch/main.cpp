@@ -23,6 +23,8 @@ extern "C"{
 #include "misc/inline_func.hpp"
 #include "misc/const_demo.hpp"
 #include "misc/name_control.hpp"
+#include "class/copy_constructor.hpp"
+#include "misc/opreator_overwrite.hpp"
 
 /*
  *1.File global namespace using
@@ -33,29 +35,8 @@ extern "C"{
  *namespace m = MySpace;
  */
 int main(int argc, const char * argv[]) {
-//    std::cout<<"main start"<<std::endl;
-//    function_override_and_default_parm::multiConstructor();
-//    useMacro();
-//    // insert code here...
-//
-//    Bike* b = new Bike();
-//    b->bikerun();
-//    b->bikedelete();
-//    system("pause");
-//
-//    function_override_and_default_parm::defaultParm(1);
-//    //object_access::Car* car = new object_access::Car();
-////    car-
-////    useMacro();
-////    inlineFunc();
-////    (new InlineFuncDemo())->inlineFunc();
-////    constTest();
-//    nameControlMain();
-//
-//    std::cout<<"main end"<<std::endl;
-    
-    function_override_and_default_parm::multiConstructor();
-
+    //copy_constructor::copyConstructorTest();
+    opreator_overwrite::opreatorOverwriteTest();
     return 0;
 }
 
