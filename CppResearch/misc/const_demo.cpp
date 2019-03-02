@@ -71,6 +71,8 @@ void constParamAndReturnValueTest(){
     
     //函数产生临时变量，不管这个函数返回的是不是const变量，临时变量都是const的
     //所以不能当非const参数传递
+    //noConstParam();
+    //int a=noConstReturnValue();
     //noConstParam(noConstReturnValue());
     //noConstParam(constReturnValue());
     

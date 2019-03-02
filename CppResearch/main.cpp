@@ -25,6 +25,9 @@ extern "C"{
 #include "misc/name_control.hpp"
 #include "class/copy_constructor.hpp"
 #include "misc/opreator_overwrite.hpp"
+#include "answer_reference/container_iterator.hpp"
+#include "class/new_delete.hpp"
+#include "class/extends.hpp"
 
 /*
  *1.File global namespace using
@@ -36,7 +39,15 @@ extern "C"{
  */
 int main(int argc, const char * argv[]) {
     //copy_constructor::copyConstructorTest();
-    opreator_overwrite::opreatorOverwriteTest();
+    //opreator_overwrite::opreatorOverwriteTest();
+    //containerIteratorTest();
+    //opreator_overwrite::opreatorOverwriteTest();
+    //pointerSummary();
+    //new_delete::oom();
+    //new_delete::NewDeleteOverride* p = new new_delete::NewDeleteOverride();
+    //delete p;
+    //extends::test();
+    containerIteratorTest();
     return 0;
 }
 

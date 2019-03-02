@@ -14,7 +14,7 @@ using namespace std;
 
 /*
  *  -----------------0x7fff5fbff59c <------------|
- *  |               |                   ---------|---------|
+ *  |               |                   ---------|---------|0x7fff5fbff330
  *  |   int a=1     |                   |  int* pa=&a      |
  *  |_______________|0x7fff5fbff598     |  0x7fff5fbff59c  |
  *  |               |                   |    pointer       |
@@ -30,11 +30,12 @@ using namespace std;
  */
 void pointerSummary(){
     int a=1,b=2,c=3;
-    int* pa;
+    int* pa = &a;
     int* pb;
     cout<<"&a=>"<<&a<<endl;
     cout<<"&b=>"<<&b<<endl;
     cout<<"&c=>"<<&c<<endl;
+    cout<<"&pa=>"<<&pa<<endl;
     cout<<"\n"<<endl;
     
     
@@ -83,14 +84,14 @@ void pointerOperation(){
     int i = 100;
     int* pi = &i;
     cout<<"pi:"<<pi<<endl;
-    cout<<"pi++"<<++pi<<endl;
-    cout<<"pi--"<<--pi<<endl;
+    cout<<"pi++:"<<pi++<<endl;
+    cout<<"pi--:"<<pi--<<endl;
     
     long l = 100;
     long* pl = &l;
     cout<<"pl:"<<pl<<endl;
-    cout<<"pl++:"<<++pl<<endl;
-    cout<<"pl++:"<<--pl<<endl;
+    cout<<"++pl:"<<++pl<<endl;
+    cout<<"--pl:"<<--pl<<endl;
     
     
     /*
@@ -98,6 +99,9 @@ void pointerOperation(){
      */
     int i2 = 213;
     cout<<"pi-pi2:"<<(pi-&i2)<<endl;
+    
+    cout<<"pi+5:"<<pi+5<<endl;
+    
 }
 
 void pointerMemory(){

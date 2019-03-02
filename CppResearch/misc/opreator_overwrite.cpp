@@ -22,6 +22,19 @@ void opreator_overwrite::opreatorOverwriteTest(){
    
     (integer<<2).log();
     (integer<<4).log();
+    
+    //注意integer是个对象/引用，并不是一个指针
+    //(&integer)->的写法是不对的，注意体会
+    integer->log();
+    
+   
+    integer->memberPointer();
+    
+    //Integer* pi = &integer;
+    int Integer::*pMember = &Integer::member;
+    (integer->*pMember).log();
+    
+    
 }
 
 Integer opreator_overwrite::operator-(const Integer& integer){

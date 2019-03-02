@@ -32,6 +32,7 @@ namespace car_simulation{
             fuelTank->gasolineUp(value);
         }
         
+        
     private:
         //前左轮
         Wheel* fontLeftWheel;
@@ -42,9 +43,8 @@ namespace car_simulation{
         //后右轮
         Wheel* backRightWheel;
         FuelTank* fuelTank;
-        
-        
     };
+
 }
 
 #endif /* car_hpp */

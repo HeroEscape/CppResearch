@@ -77,10 +77,10 @@ public:
     //c.常量必须在构造函数执行前执行，也就是这个“专用的位置”-构造函数初始化列表
     // X(){编译不通过
     //如果const int size; 没有初始化，那么这个显式的构造函数必须定义，否则编译不通过
-    X():size(1){
+    X():size(10){
         std::cout<<"X() size:"<<size<<std::endl;
     }
-    //d.内建类型的“普通化”-把诸如int，float等内建n类型看成普通类型。
+    //d.内建类型的“普通化”-把诸如int，float等内建类型看成普通类型。
     //size(1)就是一种“普通化”的“构造函数”
     
     //e.常量对象的数据常量性控制的问题
@@ -101,10 +101,10 @@ public:
         //即modifyMember(X this)变成modifyMember(const X this)
     }
     
-    //f.按位与和按逻辑与
-    //按位与：整个对象分毫不可被修改
-    //按逻辑与：对象本身不可修改，但是它的成员可以被修改
-    //默认行为是按位与
+    //f.按位const和按逻辑const
+    //按位const：整个对象分毫不可被修改
+    //按逻辑const：对象本身不可修改，但是它的成员可以被修改
+    //默认行为是按位const
     //那么如何实现按逻辑与呢？有两种方案
     //方案一：强转
     void forceModify() const{
@@ -119,7 +119,7 @@ public:
     }
     //两个方案孰优孰劣？
     //自然是方案二，强转会带来问题，一个const的常量被莫名的修改了，会造成困惑，但是
-    //mutable 修饰变量起到提醒调用者注意这个问题的作用，比偷摸的x强转修改要好
+    //mutable 修饰变量起到提醒调用者注意这个问题的作用，比偷摸的强转修改要好
     
     static void test(){
         X x;
@@ -146,7 +146,7 @@ inline X generateX(){
 }
 
 //6.volatile
-//cost volatile:c-v限定词(c-v qualifier)
+//const volatile:c-v限定词(c-v qualifier)
 
 void constTest();
 #endif /* const_demo_hpp */

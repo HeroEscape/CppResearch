@@ -11,6 +11,8 @@
 #include <unistd.h>
 using namespace std;
 void car_simulation::startSimulation(){
+    int b=1;
+  
     Car* car = new car_simulation::Car();
     long distance = 0;
     car->start();
