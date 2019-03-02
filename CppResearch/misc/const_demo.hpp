@@ -66,8 +66,8 @@ class X{
     static const int initIndex = 0;
     //b.enum hack,之前老版的编译器不支持static const，用enum hack解决
     enum{enumIndex = 0};
-    int a1[initIndex];
-    int a2[enumIndex];
+   // int a1[initIndex];
+   // int a2[enumIndex];
     
     int value = 0;
 public:
