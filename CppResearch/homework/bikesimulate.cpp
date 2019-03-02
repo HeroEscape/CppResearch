@@ -14,11 +14,11 @@ void bikesimulate() {
 		tili1.tilisimulate();
 		distanceleft = distanceleft - speed;
 		cout << "distanceleft:" << distanceleft << endl;
-		if (value <= 0) {
-			cout << "need rest  resting" << endl;
-			time += 3;
-			value = 50;
-		}
+//        if (value <= 0) {
+//            cout << "need rest  resting" << endl;
+//            time += 3;
+//            value = 50;
+//        }
 		time += 1;
 	}
 	bike1.bikedelete();

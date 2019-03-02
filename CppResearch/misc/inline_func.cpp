@@ -23,3 +23,4 @@ void InlineFuncDemo::notInline(){
 inline void InlineFuncDemo::forceInlineFunc(){
     cout<<"forceInlineFunc"<<endl;
 }
+

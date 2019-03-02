@@ -42,6 +42,9 @@ namespace name_control {
             std::cout<<"name_control::~X()=>"<<name<<std::endl;
         }
         
+        std::string getName(){
+            return name;
+        }
     };
 }
 
@@ -81,16 +84,63 @@ inline void linkControl(){
 //a.命名空间可以随拿随用，这一点区别于class和struct
 namespace name_control_namespace_test {
     extern std::string slogon;
+    void multiFunc();
 }
 namespace name_control_namespace_test {
     extern std::string slogon4C;
+    void multiFunc();
 }
 
-//b.未命名空间
+namespace name_control_namespace_test2 {
+    void multiFunc();
+}
+
+//b.未命名空间,可以把一个全局变量变成内连接的
 namespace {
-    extern std::string noNameVlaue;
+    std::string noNameVlaue="noNameVlaue";
 }
 
+//c.使用命名空间
+//如果每一次都用 命名空间::变量/类的方式去引用，显得太过麻烦，我们可以使用using来简化这个过程
+//但是建议不要（b或者是不能够）在头文件中用using，因为每个include这个头文件的地方相当于都using那个命名空间了
+//这样会造成程序潜在的bug
+void usingNameSpace();
+
+//5.类中的static变量
+
+namespace name_control {
+    //我们现在有个需求：统计这个类有多少个实例？
+    class Y{
+    public:
+        Y(){
+            instanceCount++;
+            std::cout<<"Y() instanceCount:"<<instanceCount<<std::endl;
+        }
+        ~Y(){
+            instanceCount--;
+            std::cout<<"~Y() instanceCount:"<<instanceCount<<std::endl;
+        }
+        
+    public:
+        //a.static全局共享，但是又被限定在了该类的作用域中
+        //即q同一个类以及由该类产生的示例共享
+        static int instanceCount;
+        
+        //b.这句代码无法编译通过，因为static的变量必须在外部（.cpp文件中）定义
+        //static int hello=10;
+        //这句代码也无法编译通过，和普通变量一样，自定义类型static变量也需要在外部定义
+        //static X x("MyName");
+        static X x;
+        
+        //c.静态函数
+        static void staticFunc();
+        
+        //课堂练习
+        //现在有一个要求：一个类只能被实例化一次，利用所学的知识点你怎么设计？
+        //即经典的设计模式——单例模式
+        
+    };
+}
 
 inline void nameControlMain(){
     //调用十次
@@ -99,6 +149,24 @@ inline void nameControlMain(){
         staticObj();
     }
     std::cout<<name_control_namespace_test::slogon<<std::endl;
-    //std::cout<<name_control_namespace_test::slogon4C<<std::endl;
+    std::cout<<name_control_namespace_test::slogon4C<<std::endl;
+    std::cout<<"noNameVlaue:"<<noNameVlaue<<std::endl;
+    
+    usingNameSpace();
+    
+    for(int i=0;i<5;i++){
+        name_control::Y y;
+    }
+    std::cout<<"Y::instanceCount=>"<<name_control::Y::instanceCount<<std::endl;
+    
+    //如果是new Y()，又会怎样呢？
+    
+    //静态对象
+    std::cout<<"Y::x=>"<<name_control::Y::x.getName()<<std::endl;
+    
+    //静态函数
+    name_control::Y::staticFunc();
+    
+   
 }
 #endif /* name_control_hpp */
