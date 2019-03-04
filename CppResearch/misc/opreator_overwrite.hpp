@@ -44,6 +44,7 @@ namespace opreator_overwrite{
             return Integer(i+integer.i);
         }
        
+        
         //3.作为全局重载
         friend Integer operator-(const Integer& integer);//一元运算符
         friend Integer operator-(const Integer& left, const Integer& right);//二元运算符

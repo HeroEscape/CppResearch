@@ -11,6 +11,9 @@ using namespace opreator_overwrite;
 using namespace std;
 void opreator_overwrite::opreatorOverwriteTest(){
     opreator_overwrite::Integer integer(1);
+    
+    
+    
     integer.log();
     (integer+integer).log();
     (+integer).log();
@@ -24,8 +27,9 @@ void opreator_overwrite::opreatorOverwriteTest(){
     (integer<<4).log();
     
     //注意integer是个对象/引用，并不是一个指针
-    //(&integer)->的写法是不对的，注意体会
+    //(&integer)->的写法不是复写的流程，注意体会
     integer->log();
+    (&integer)->log();
     
    
     integer->memberPointer();
