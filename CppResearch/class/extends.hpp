@@ -56,7 +56,6 @@ class Car{
             car->showLog();
         }
         
-        
     };
     
     /*
@@ -92,11 +91,14 @@ class Car{
         void bark(){
             cout<<"I am "<<firstName<<"-"<<name<<endl;
         }
-        //7.protect 关键字,对外不可访问，但是子类可以访问
+        //7.protected 关键字,对外不可访问，但是子类可以访问
+    protected:
         string firstName;
     };
     class Dog:public Animal{
     public:
+
+        Porsche* porsche;
         Dog():Animal("wangwang"){
             cout<<"Dog()"<<endl;
             firstName = "dog";

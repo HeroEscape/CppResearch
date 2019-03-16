@@ -32,6 +32,7 @@ extern "C"{
 #include "answer_reference/container_iterator.hpp"
 #include "class/new_delete.hpp"
 #include "class/extends.hpp"
+#include "class/virtual_function.hpp"
 
 
 /*
@@ -42,6 +43,7 @@ extern "C"{
  *2Simplefy namespace with 'nickname'
  *namespace m = MySpace;
  */
+#include "misc/template_generics.hpp"
 int main(int argc, const char * argv[]) {
 
     //copy_constructor::copyConstructorTest();
@@ -54,25 +56,27 @@ int main(int argc, const char * argv[]) {
     //delete p;
     //extends::test();
     //containerIteratorTest();
-    opreator_overwrite::opreatorOverwriteTest();
+    //opreator_overwrite::opreatorOverwriteTest();
+    //new_delete::oom();
+
+    //virtual_funtion_test();
 
 
-    std::cout<<"main start"<<std::endl;
    // function_override_and_default_parm::multiConstructor();
     //useMacro();
     // insert code here...
 
-	Z* z1 = new Z();
-	Z* z2 = new Z();
-
-	std::cout << Z::a<< std::endl;
-
-	delete z1;
-	delete z2;
-
-	std::cout << Z::a << std::endl;
-
-	system("pause");
+//    Z* z1 = new Z();
+//    Z* z2 = new Z();
+//
+//    std::cout << Z::a<< std::endl;
+//
+//    delete z1;
+//    delete z2;
+//
+//    std::cout << Z::a << std::endl;
+//
+//    system("pause");
 
     //function_override_and_default_parm::defaultParm(1);
     //object_access::Car* car = new object_access::Car();
@@ -82,9 +86,24 @@ int main(int argc, const char * argv[]) {
 //    (new InlineFuncDemo())->inlineFunc();
 //    constTest();
 //    nameControlMain();
+    //new_delete::oom();
+    //virtual_funtion_test();
+    //std::cout<<"main end"<<std::endl;
     
-    std::cout<<"main end"<<std::endl;
-
+//    #ifdef __APPLE__
+//    
+//    cout<<"It is in UNIX OS!"<<endl;
+//    #endif
+//
+//    #ifdef __WINDOWS_
+//    
+//    no_os_flag=0;
+//    
+//    cout<<"It is in Windows OS!"<<endl;
+//    
+//    #endif
+    
+    test();
     return 0;
 }
 

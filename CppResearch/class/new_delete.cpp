@@ -25,7 +25,7 @@ void new_delete::cppStyle(){
 }
 
 /*我们发现在delete的时候析构函数并没有被调用,如果析构函数中
- *有重要的e任务（比如清楚其他对象），那么将会导致严重后果
+ *有重要的任务（比如清除其他对象），那么将会导致严重后果
 */
 void new_delete::deleteVoidPointer(){
     void* obj = new Obj();
@@ -47,7 +47,7 @@ void new_delete::oom(){
     //设置内存耗尽后的处理函数
     set_new_handler(out_of_memory);
     while (1) {
-        int* p = new int[1024*1024*10];
+        int* p = new int[1024*1024*1];
     }
 }
 
